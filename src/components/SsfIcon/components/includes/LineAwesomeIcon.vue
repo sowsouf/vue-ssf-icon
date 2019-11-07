@@ -13,12 +13,12 @@
 
         props: {
             /* STRONG */
-            regular: { type: Boolean, required: false, default: true },
+            regular: { type: Boolean, required: false, default: false },
             solid  : { type: Boolean, required: false, default: false },
             light  : { type: Boolean, required: false, default: false },
             brand  : { type: Boolean, required: false, default: false },
             duoTone: { type: Boolean, required: false, default: false },
-            normal : { type: Boolean, required: false, default: false },
+            normal : { type: Boolean, required: false, default: true },
 
             /* ICON */
             icon    : { type: String, required: true, validator: (value) => Icons.lineAwesome.includes(value) },
@@ -36,7 +36,7 @@
             },
 
             strongClass() {
-                return this.normal ? 'la' : this.light ? 'lal' : this.solid ? 'las' : this.brand ? 'lab' : this.duoTone ? 'lad' : 'lar'
+                return this.regular ? 'lar' : this.light ? 'lal' : this.solid ? 'las' : this.brand ? 'lab' : this.duoTone ? 'lad' : 'la'
             },
 
             iconClass() {
