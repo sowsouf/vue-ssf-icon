@@ -35,7 +35,7 @@
             rotate  : { type: String, required: false, default: '' },
             pull    : { required: false, default: false },
             // STRONG
-            regular : { type: Boolean, required: false, default: true },
+            regular : { type: Boolean, required: false, default: false },
             solid   : { type: Boolean, required: false, default: false },
             light   : { type: Boolean, required: false, default: false },
             brand   : { type: Boolean, required: false, default: false },
