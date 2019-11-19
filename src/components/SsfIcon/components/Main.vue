@@ -1,12 +1,12 @@
 <template>
   <ssf-font-awesome-icon :icon="icon" :size="size" :fw="fw" :animated="animated" :rotate="rotate" :pull="pull"
                          :regular="regular" :solid="solid" :light="light" :brand="brand" :normal="normal"
-                         v-if="isFontAwesome"/>
+                         v-if="isFontAwesome" @click="$emit('click')"/>
   <ssf-line-awesome-icon :icon="icon" :size="size" :fw="fw" :animated="animated" :rotate="rotate" :pull="pull"
                          :regular="regular" :solid="solid" :light="light" :brand="brand" :normal="normal"
-                         :duo-tone="twoTone" v-else-if="isLineAwesome"/>
+                         :duo-tone="twoTone" v-else-if="isLineAwesome" @click="$emit('click')"/>
   <ssf-material-icon :icon="icon" :outlined="outlined" :filled="filled" :rounded="rounded" :two-tone="twoTone"
-                     :sharp="sharp" v-else-if="isMaterial"/>
+                     :sharp="sharp" v-else-if="isMaterial" @click="$emit('click')"/>
 </template>
 
 <script>

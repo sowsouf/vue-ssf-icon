@@ -1,5 +1,5 @@
 <template>
-  <i class="material-icons" :class="materialClass" :style="`${size ? 'font-size: ' + size + 'px' : ''}`">{{ icon }}</i>
+  <i class="material-icons" :class="materialClass" :style="`${size ? 'font-size: ' + size + 'px' : ''}`" @click="$emit('click')">{{ icon }}</i>
 </template>
 
 <script>

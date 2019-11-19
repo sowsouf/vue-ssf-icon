@@ -1,5 +1,5 @@
 <template>
-  <i :class="lineAwesomeClass"></i>
+  <i :class="lineAwesomeClass" @click="$emit('click')"></i>
 </template>
 
 <script>

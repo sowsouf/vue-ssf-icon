@@ -1,5 +1,5 @@
 <template>
-  <i :class="fontAwesomeClass"></i>
+  <i :class="fontAwesomeClass" @click="$emit('click')"></i>
 </template>
 
 <script>
