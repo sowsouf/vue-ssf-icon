@@ -1,12 +1,11 @@
-// The Vue build version to load with the `import` command
-// (runtime-only or standalone) has been set in webpack.base.conf with an alias.
-import Vue from 'vue'
+import SsfIcon            from "@/components/SsfIcon/components/Main";
+import SsfFontAwesomeIcon from "@/components/SsfIcon/components/includes/FontAwesomeIcon";
+import SsfLineAwesomeIcon from "@/components/SsfIcon/components/includes/LineAwesomeIcon";
+import SsfMaterialIcon    from "@/components/SsfIcon/components/includes/MaterialIcon";
 
-import App     from './App'
-
-Vue.config.productionTip = false
-
-new Vue({
-  el    : '#app',
-  render: h => h(App)
-}).$mount('#app')
+export {
+  SsfIcon,
+  SsfFontAwesomeIcon,
+  SsfLineAwesomeIcon,
+  SsfMaterialIcon
+}

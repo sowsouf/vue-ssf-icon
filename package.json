@@ -1,7 +1,7 @@
 {
   "name": "ssf-icon",
-  "version": "1.0.0",
-  "description": "A Vue.js component for html input",
+  "version": "2.0.6",
+  "description": "A Vue.js component for icon",
   "author": "Sofiane Akbly <sofiane.akbly@gmail.com>",
   "private": true,
   "main": "./dist/vue-ssf-icon.common.js",
@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.8.0",
-    "@vue/cli-service": "^3.8.0",
+    "@vue/cli-service": "^4.1.2",
     "fibers": "^4.0.2",
     "lodash": "latest",
     "node-sass": "^4.13.0",
