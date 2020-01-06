@@ -1,42 +1,42 @@
 {
-  "name"            : "ssf-icon",
-  "version"         : "2.0.0",
-  "description"     : "A Vue.js component for icon",
-  "author"          : "Sofiane Akbly <sofiane.akbly@gmail.com>",
-  "private"         : true,
-  "main"            : "./index.js",
-  "scripts"         : {
-    "serve"       : "vue-cli-service serve",
-    "build"       : "vue-cli-service build",
-    "build-lib"   : "vue-cli-service build --target lib --name vue-ssf-icon src/main.js",
-    "postversion" : "git push origin dev && git push --tags && upload-modules ssf-icon SsfIcon"
+  "name": "ssf-icon",
+  "version": "2.0.1",
+  "description": "A Vue.js component for icon",
+  "author": "Sofiane Akbly <sofiane.akbly@gmail.com>",
+  "private": true,
+  "main": "./index.js",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "build-lib": "vue-cli-service build --target lib --name vue-ssf-icon src/main.js",
+    "postversion": "git push origin dev && git push --tags && upload-modules ssf-icon SsfIcon"
   },
-  "dependencies"    : {
-    "moment"          : "^2.24.0",
-    "moment-timezone" : "^0.5.27",
-    "vue"             : "^2.6.10"
+  "dependencies": {
+    "moment": "^2.24.0",
+    "moment-timezone": "^0.5.27",
+    "vue": "^2.6.10"
   },
-  "devDependencies" : {
-    "@vue/cli-plugin-babel" : "^3.8.0",
-    "@vue/cli-service"      : "^4.1.2",
-    "fibers"                : "^4.0.2",
-    "lodash"                : "latest",
-    "node-sass"             : "^4.13.0",
-    "sass"                  : "^1.23.3",
-    "sass-loader"           : "^8.0.0",
-    "style-loader"          : "^1.0.0",
-    "vue-template-compiler" : "^2.6.10"
+  "devDependencies": {
+    "@vue/cli-plugin-babel": "^3.8.0",
+    "@vue/cli-service": "^4.1.2",
+    "fibers": "^4.0.2",
+    "lodash": "latest",
+    "node-sass": "^4.13.0",
+    "sass": "^1.23.3",
+    "sass-loader": "^8.0.0",
+    "style-loader": "^1.0.0",
+    "vue-template-compiler": "^2.6.10"
   },
-  "engines"         : {
-    "node" : ">= 8.0.0",
-    "npm"  : ">= 6.0.0"
+  "engines": {
+    "node": ">= 8.0.0",
+    "npm": ">= 6.0.0"
   },
-  "browserslist"    : [
+  "browserslist": [
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
   ],
-  "files"           : [
+  "files": [
     "dist/*"
   ]
 }
