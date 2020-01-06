@@ -1,10 +1,10 @@
 {
   "name": "ssf-icon",
-  "version": "2.0.3",
+  "version": "1.0.0",
   "description": "A Vue.js component for icon",
   "author": "Sofiane Akbly <sofiane.akbly@gmail.com>",
   "private": true,
-  "main": "./dist/index.js",
+  "main": "./dist/vue-ssf-icon.common.js",
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
