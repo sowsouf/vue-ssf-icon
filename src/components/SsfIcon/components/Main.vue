@@ -1,79 +1,69 @@
 <template>
   <ssf-font-awesome-icon :icon="icon" :size="size" :fw="fw" :animated="animated" :rotate="rotate" :pull="pull"
-                         :regular="regular" :solid="solid" :light="light" :brand="brand" :normal="normal"
-                         v-if="isFontAwesome" @click="$emit('click')"/>
+                         :weight="weight" v-if="isFontAwesome" @click="$emit('click')"/>
   <ssf-line-awesome-icon :icon="icon" :size="size" :fw="fw" :animated="animated" :rotate="rotate" :pull="pull"
-                         :regular="regular" :solid="solid" :light="light" :brand="brand" :normal="normal"
-                         :duo-tone="twoTone" v-else-if="isLineAwesome" @click="$emit('click')"/>
-  <ssf-material-icon :icon="icon" :outlined="outlined" :filled="filled" :rounded="rounded" :two-tone="twoTone"
-                     :sharp="sharp" v-else-if="isMaterial" @click="$emit('click')"/>
+                         :weight="weight" v-else-if="isLineAwesome" @click="$emit('click')"/>
+  <ssf-material-icon :icon="icon" :weight="weight" v-else-if="isMaterial" @click="$emit('click')"/>
 </template>
 
 <script>
 
-    import "../assets/css/material.scss"
+  import "../assets/css/material.scss"
 
-    import SsfFontAwesomeIcon from "./includes/FontAwesomeIcon";
-    import SsfLineAwesomeIcon from "./includes/LineAwesomeIcon";
-    import SsfMaterialIcon    from "./includes/MaterialIcon";
+  import SsfFontAwesomeIcon from "./includes/FontAwesomeIcon";
+  import SsfLineAwesomeIcon from "./includes/LineAwesomeIcon";
+  import SsfMaterialIcon    from "./includes/MaterialIcon";
 
-    export default {
-        name: "SsfIcon",
+  export default {
+    name: "SsfIcon",
 
-        components: { SsfLineAwesomeIcon, SsfMaterialIcon, SsfFontAwesomeIcon },
+    components: { SsfLineAwesomeIcon, SsfMaterialIcon, SsfFontAwesomeIcon },
 
-        props: {
-            type: { type: String, required: false, default: 'fa' },
+    props: {
+      type: { type: String, required: false, default: 'fa' },
 
-            /* ICON */
-            icon: { type: String, required: true },
-            size: { type: String, required: false, default: '' },
+      /* ICON */
+      icon: { type: String, required: true },
+      size: { type: String, required: false, default: '' },
 
-            /* FONT AWESOME */
-            fw      : { type: Boolean, required: false, default: false },
-            animated: { type: Boolean, required: false, default: false },
-            rotate  : { type: String, required: false, default: '' },
-            pull    : { required: false, default: false },
-            // STRONG
-            regular : { type: Boolean, required: false, default: false },
-            solid   : { type: Boolean, required: false, default: false },
-            light   : { type: Boolean, required: false, default: false },
-            brand   : { type: Boolean, required: false, default: false },
-            normal  : { type: Boolean, required: false, default: false },
+      weight: {
+        type     : String,
+        required : false,
+        validator: (value) => ['regular', 'solid', 'light', 'brand', 'normal', 'outlined', 'rounded', 'rounded', 'filled', 'twoTone', 'sharp'].includes(value)
+      },
 
-            /* MATERIAL */
-            outlined: { type: Boolean, required: false, default: true },
-            rounded : { type: Boolean, required: false, default: false },
-            filled  : { type: Boolean, required: false, default: false },
-            twoTone : { type: Boolean, required: false, default: false },
-            sharp   : { type: Boolean, required: false, default: false },
-        },
+      /* FONT AWESOME */
+      fw      : { type: Boolean, required: false, default: false },
+      animated: { type: Boolean, required: false, default: false },
+      rotate  : { type: String, required: false, default: '' },
+      pull    : { required: false, default: false },
+    },
 
-        data() {
-            return {}
-        },
+    data() {
+      return {}
+    },
 
-        watch: {
-            icon() {
-                this.$forceUpdate()
-            },
-        },
+    watch: {
+      icon() {
+        this.$forceUpdate()
+      },
+    },
 
-        computed: {
-            isFontAwesome() {
-                return this.type === 'fa'
-            },
+    computed: {
+      isFontAwesome() {
+        return this.type === 'fa'
+      },
 
-            isLineAwesome() {
-                return this.type === 'la'
-            },
+      isLineAwesome() {
+        return this.type === 'la'
+      },
 
-            isMaterial() {
-                return this.type === 'material'
-            }
-        },
+      isMaterial() {
+        return this.type === 'material'
+      }
+    },
 
-    }
+  }
 </script>
 
 <style lang="scss">

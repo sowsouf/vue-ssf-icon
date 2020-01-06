@@ -1,3 +1,11 @@
-import SsfIcon from "./components/Main";
+import SsfIcon            from "./components/Main";
+import SsfFontAwesomeIcon from "@/components/SsfIcon/components/includes/FontAwesomeIcon";
+import SsfLineAwesomeIcon from "@/components/SsfIcon/components/includes/LineAwesomeIcon";
+import SsfMaterialIcon    from "@/components/SsfIcon/components/includes/MaterialIcon";
 
-export default SsfIcon
+export {
+  SsfIcon,
+  SsfFontAwesomeIcon,
+  SsfLineAwesomeIcon,
+  SsfMaterialIcon
+}
