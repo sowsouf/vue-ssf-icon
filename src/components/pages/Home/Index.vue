@@ -1,8 +1,8 @@
 <template>
   <div class="home">
     <h1>Welcome to homepage, do what you want</h1>
-    <ssf-icon icon="car" :solid="true" type="la" size="8x"/>
-    <ssf-icon icon="car" size="8x"/>
+    <ssf-icon icon="car" weight="solid" type="la" size="8x"/>
+    <ssf-icon icon="car" weight="regular" size="8x"/>
     <ssf-icon icon="accessibility" type="material"/>
     Salut salut mes petits cornichons
   </div>
@@ -10,24 +10,24 @@
 
 <script>
 
-    import SsfIcon from "../../SsfIcon/components/Main";
+  import {SsfIcon} from "@/components/SsfIcon/";
 
-    export default {
+  export default {
 
-        name: 'Home',
+    name: 'Home',
 
-        components: { SsfIcon },
+    components: { SsfIcon },
 
-        data() {
-            return {}
-        },
+    data() {
+      return {}
+    },
 
-        created() {
-        },
+    created() {
+    },
 
-        methods: {}
+    methods: {}
 
-    }
+  }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
